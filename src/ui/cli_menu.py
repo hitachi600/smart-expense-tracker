@@ -40,6 +40,11 @@ class ExpenseTrackerCLI:
         """Synchronizes analytics engine with current manager state."""
         self.analytics.set_expenses(self.manager.get_all_expenses())
 
+    def _pause(self) -> None:
+        """Pauses execution so tables and charts remain visible on screen until user presses Enter."""
+        print()
+        input(f"{Colors.DIM}Press [Enter] to return to menu...{Colors.RESET}")
+
     # --- Banner & Display Helpers ---
 
     def print_banner(self) -> None:
@@ -180,12 +185,15 @@ class ExpenseTrackerCLI:
                 print(colorize(f"⚠️  ALERT: Total spending for '{category}' ({format_currency(spending)}) exceeds monthly budget ({format_currency(limit)})!", Colors.YELLOW))
         except Exception as err:
             print(colorize(f"Failed to add expense: {err}", Colors.RED))
+        self._pause()
 
-    def handle_view_expenses(self, expenses: Optional[List] = None, title: str = "ALL RECORDED EXPENSES") -> None:
+    def handle_view_expenses(self, expenses: Optional[List] = None, title: str = "ALL RECORDED EXPENSES", pause: bool = True) -> None:
         """Displays list of expenses in a structured ASCII table."""
         exp_list = expenses if expenses is not None else self.manager.get_all_expenses()
         if not exp_list:
             print(colorize("\nℹ️  No expenses recorded yet. Use Option 1 or Option 13 to load sample data.", Colors.YELLOW))
+            if pause:
+                self._pause()
             return
 
         headers = ["ID", "Date", "Category", "Title", "Amount", "Method", "Notes"]
@@ -204,6 +212,8 @@ class ExpenseTrackerCLI:
         print(format_table(headers, rows, title=title))
         total = sum(e.amount for e in exp_list)
         print(f"{Colors.BOLD}Total: {format_currency(total)} across {len(exp_list)} record(s).{Colors.RESET}")
+        if pause:
+            self._pause()
 
     def handle_update_expense(self) -> None:
         """Handles updating an existing expense."""
@@ -211,6 +221,7 @@ class ExpenseTrackerCLI:
         val = input("Enter Expense ID to update: ").strip()
         if not val.isdigit():
             print(colorize("ID must be a number.", Colors.RED))
+            self._pause()
             return
 
         exp_id = int(val)
@@ -218,6 +229,7 @@ class ExpenseTrackerCLI:
             exp = self.manager.get_expense(exp_id)
         except ExpenseNotFoundError as err:
             print(colorize(str(err), Colors.RED))
+            self._pause()
             return
 
         print(f"\nEditing: {exp}")
@@ -246,6 +258,7 @@ class ExpenseTrackerCLI:
             print(colorize(f"\n✅ Expense #{exp_id} updated successfully!", Colors.GREEN))
         except Exception as err:
             print(colorize(f"Update failed: {err}", Colors.RED))
+        self._pause()
 
     def handle_delete_expense(self) -> None:
         """Handles deleting an expense record."""
@@ -253,6 +266,7 @@ class ExpenseTrackerCLI:
         val = input("Enter Expense ID to delete: ").strip()
         if not val.isdigit():
             print(colorize("ID must be a number.", Colors.RED))
+            self._pause()
             return
 
         exp_id = int(val)
@@ -267,6 +281,7 @@ class ExpenseTrackerCLI:
                 print("Deletion cancelled.")
         except ExpenseNotFoundError as err:
             print(colorize(str(err), Colors.RED))
+        self._pause()
 
     def handle_search(self) -> None:
         """Handles keyword searching."""
@@ -274,10 +289,11 @@ class ExpenseTrackerCLI:
         query = input("Enter search keyword (matches Title, Category, Notes, Method): ").strip()
         if not query:
             print("Empty query.")
+            self._pause()
             return
 
         results = self.manager.search_expenses(query)
-        self.handle_view_expenses(results, title=f"SEARCH RESULTS FOR: '{query}'")
+        self.handle_view_expenses(results, title=f"SEARCH RESULTS FOR: '{query}'", pause=True)
 
     def handle_filter(self) -> None:
         """Handles multi-criteria filtering."""
@@ -300,7 +316,7 @@ class ExpenseTrackerCLI:
             start_date=start_d if start_d else None,
             end_date=end_d if end_d else None
         )
-        self.handle_view_expenses(filtered, title="FILTERED EXPENSES")
+        self.handle_view_expenses(filtered, title="FILTERED EXPENSES", pause=True)
 
     def handle_summary_stats(self) -> None:
         """Displays descriptive statistics calculated via NumPy."""
@@ -309,6 +325,7 @@ class ExpenseTrackerCLI:
 
         if stats["count"] == 0:
             print(colorize("No data to analyze.", Colors.YELLOW))
+            self._pause()
             return
 
         headers = ["Statistical Metric (NumPy Engine)", "Computed Value"]
@@ -327,6 +344,7 @@ class ExpenseTrackerCLI:
             ["Interquartile Range (IQR)", format_currency(stats["iqr"])]
         ]
         print(format_table(headers, rows, title="DESCRIPTIVE FINANCIAL METRICS (NumPy)"))
+        self._pause()
 
     def handle_category_analysis(self) -> None:
         """Displays category aggregations via Pandas."""
@@ -334,6 +352,7 @@ class ExpenseTrackerCLI:
         cat_df = self.analytics.get_category_summary()
         if cat_df.empty:
             print(colorize("No data for category analysis.", Colors.YELLOW))
+            self._pause()
             return
 
         headers = ["Category", "Total Spent", "Count", "Average", "% Share"]
@@ -347,6 +366,7 @@ class ExpenseTrackerCLI:
                 f"{r['% of Total']}%"
             ])
         print(format_table(headers, rows, title="CATEGORY BREAKDOWN & AGGREGATIONS (Pandas)"))
+        self._pause()
 
     def handle_monthly_analysis(self) -> None:
         """Displays monthly spending trends via Pandas."""
@@ -354,6 +374,7 @@ class ExpenseTrackerCLI:
         month_df = self.analytics.get_monthly_summary()
         if month_df.empty:
             print(colorize("No data for monthly analysis.", Colors.YELLOW))
+            self._pause()
             return
 
         headers = ["Month", "Total Spent", "Txns", "Avg/Txn", "Top Category"]
@@ -367,12 +388,14 @@ class ExpenseTrackerCLI:
                 str(r["Top Category"])
             ])
         print(format_table(headers, rows, title="MONTHLY SPENDING ANALYSIS (Pandas)"))
+        self._pause()
 
     def handle_generate_charts(self) -> None:
         """Generates and exports Matplotlib charts."""
         self._sync_analytics()
         if self.manager.count() == 0:
             print(colorize("No expense records available to plot.", Colors.YELLOW))
+            self._pause()
             return
 
         print(f"\n{Colors.BOLD}Select Chart to Generate:{Colors.RESET}")
@@ -405,17 +428,20 @@ class ExpenseTrackerCLI:
             paths.append(self.visualizer.plot_dashboard(self.manager.budget))
         else:
             print(colorize("Invalid option.", Colors.RED))
+            self._pause()
             return
 
         for p in paths:
             if p:
                 print(colorize(f"📊 Chart successfully saved: {p}", Colors.GREEN))
+        self._pause()
 
     def handle_export_reports(self) -> None:
         """Exports reports in txt, markdown, or csv format."""
         self._sync_analytics()
         if self.manager.count() == 0:
             print(colorize("No data to export.", Colors.YELLOW))
+            self._pause()
             return
 
         print(f"\n{Colors.BOLD}Select Export Format:{Colors.RESET}")
@@ -441,6 +467,7 @@ class ExpenseTrackerCLI:
             print(colorize(f"✅ All reports exported successfully:\n  - {p1}\n  - {p2}\n  - {p3}", Colors.GREEN))
         else:
             print(colorize("Invalid choice.", Colors.RED))
+        self._pause()
 
     def handle_budget_management(self) -> None:
         """Manages monthly category limits and inspects status."""
@@ -471,6 +498,7 @@ class ExpenseTrackerCLI:
             limit = self._prompt_amount(current=self.manager.budget.get_category_limit(cat))
             self.manager.budget.set_category_limit(cat, limit)
             print(colorize(f"✅ Updated budget limit for '{cat}' to {format_currency(limit)}", Colors.GREEN))
+        self._pause()
 
     def handle_load_samples(self) -> None:
         """Populates realistic sample expenses."""
@@ -479,7 +507,9 @@ class ExpenseTrackerCLI:
             count = self.manager.populate_sample_data(count=40, days_back=90)
             self._sync_analytics()
             print(colorize(f"\n🎉 Loaded {count} sample expense transactions successfully!", Colors.GREEN))
-            self.handle_view_expenses()
+            self.handle_view_expenses(pause=True)
+        else:
+            self._pause()
 
     def handle_clear_all(self) -> None:
         """Clears all data."""
@@ -490,6 +520,7 @@ class ExpenseTrackerCLI:
             print(colorize("Database has been reset.", Colors.YELLOW))
         else:
             print("Operation aborted.")
+        self._pause()
 
     # --- Main Application Loop ---
 
