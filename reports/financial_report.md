@@ -1,0 +1,73 @@
+# 📊 Smart Financial Analytics & Expense Report
+
+**Generated on:** `2026-09-18 13:40:32`  
+**Total Records:** `40`
+
+---
+
+## 📈 1. Statistical Summary (NumPy)
+
+| Metric | Value | Metric | Value |
+| :--- | :--- | :--- | :--- |
+| **Total Expenditure** | **$3,903.40** | **Std Deviation** | $215.28 |
+| **Mean (Average)** | $97.59 | **25th Percentile** | $31.59 |
+| **Median** | $53.64 | **75th Percentile** | $83.56 |
+| **Min Transaction** | $17.29 | **90th Percentile** | $113.93 |
+| **Max Transaction** | $1,412.92 | **IQR** | $51.97 |
+
+---
+
+## 🍔 2. Category Breakdown (Pandas)
+
+| Category | Total Spent | Count | Average | % Share |
+| :--- | :--- | :--- | :--- | :--- |
+| Housing & Utilities | $1,855.32 | 6 | $309.22 | 47.5% |
+| Transportation | $888.29 | 10 | $88.83 | 22.8% |
+| Entertainment | $224.91 | 6 | $37.49 | 5.8% |
+| Food & Dining | $195.59 | 3 | $65.20 | 5.0% |
+| Healthcare | $191.37 | 5 | $38.27 | 4.9% |
+| Shopping | $177.18 | 3 | $59.06 | 4.5% |
+| Investments | $158.03 | 1 | $158.03 | 4.0% |
+| Personal Care | $97.30 | 2 | $48.65 | 2.5% |
+| Education | $91.74 | 3 | $30.58 | 2.4% |
+| Miscellaneous | $23.67 | 1 | $23.67 | 0.6% |
+
+---
+
+## 📅 3. Monthly Trends
+
+| Month | Total Spent | Transactions | Avg / Txn | Top Category |
+| :--- | :--- | :--- | :--- | :--- |
+| 2026-06 | $522.76 | 7 | $74.68 | Transportation |
+| 2026-07 | $772.37 | 13 | $59.41 | Transportation |
+| 2026-08 | $2,374.53 | 17 | $139.68 | Housing & Utilities |
+| 2026-09 | $233.74 | 3 | $77.91 | Transportation |
+
+---
+
+## 🏆 4. Top 5 Transactions
+
+| ID | Date | Category | Title | Amount | Method |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| #36 | 2026-08-30 | Housing & Utilities | Apartment Monthly Rent | **$1,412.92** | Bank Transfer |
+| #3 | 2026-06-23 | Transportation | Car Maintenance & Oil Change | **$245.37** | Credit Card |
+| #20 | 2026-07-29 | Investments | Stock Portfolio Deposit | **$158.03** | Bank Transfer |
+| #28 | 2026-08-20 | Housing & Utilities | Electricity & Power Bill | **$128.21** | UPI / Online |
+| #12 | 2026-07-06 | Transportation | Car Maintenance & Oil Change | **$112.34** | Debit Card |
+
+---
+
+## 🎯 5. Budget Health
+
+| Category | Budget Limit | Actual Spent | Remaining | % Used | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Food & Dining | $600.00 | $195.59 | $404.41 | 32.6% | 🟢 ON TRACK |
+| Transportation | $300.00 | $888.29 | $-588.29 | 296.1% | 🔴 EXCEEDED |
+| Housing & Utilities | $1,400.00 | $1,855.32 | $-455.32 | 132.5% | 🔴 EXCEEDED |
+| Entertainment | $150.00 | $224.91 | $-74.91 | 149.9% | 🔴 EXCEEDED |
+| Shopping | $250.00 | $177.18 | $72.82 | 70.9% | 🟢 ON TRACK |
+| Healthcare | $200.00 | $191.37 | $8.63 | 95.7% | 🟡 WARNING (85%+) |
+| Education | $100.00 | $91.74 | $8.26 | 91.7% | 🟡 WARNING (85%+) |
+| Investments | $500.00 | $158.03 | $341.97 | 31.6% | 🟢 ON TRACK |
+| Personal Care | $100.00 | $97.30 | $2.70 | 97.3% | 🟡 WARNING (85%+) |
+| Miscellaneous | $150.00 | $23.67 | $126.33 | 15.8% | 🟢 ON TRACK |
