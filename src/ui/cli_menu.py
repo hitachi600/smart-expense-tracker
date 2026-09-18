@@ -139,7 +139,7 @@ class ExpenseTrackerCLI:
     def _prompt_amount(self, current: Optional[float] = None) -> float:
         """Prompts for valid positive monetary amount."""
         while True:
-            prompt = f"Amount ($)" + (f" [Default: {current:.2f}]" if current is not None else "") + ": "
+            prompt = f"Amount (₹)" + (f" [Default: {current:.2f}]" if current is not None else "") + ": "
             val = input(prompt).strip()
             if not val and current is not None:
                 return current
@@ -272,7 +272,7 @@ class ExpenseTrackerCLI:
         exp_id = int(val)
         try:
             exp = self.manager.get_expense(exp_id)
-            confirm = input(f"Are you sure you want to delete #{exp.id} '{exp.title}' (${exp.amount:.2f})? (y/N): ").strip().lower()
+            confirm = input(f"Are you sure you want to delete #{exp.id} '{exp.title}' (₹{exp.amount:.2f})? (y/N): ").strip().lower()
             if confirm == "y":
                 self.manager.delete_expense(exp_id)
                 self._sync_analytics()
@@ -301,8 +301,8 @@ class ExpenseTrackerCLI:
         print("Leave any filter blank to skip.")
 
         cat_choice = input("Filter by Category name (or blank for all): ").strip()
-        min_amt_str = input("Min Amount ($): ").strip()
-        max_amt_str = input("Max Amount ($): ").strip()
+        min_amt_str = input("Min Amount (₹): ").strip()
+        max_amt_str = input("Max Amount (₹): ").strip()
         start_d = input("Start Date (YYYY-MM-DD): ").strip()
         end_d = input("End Date (YYYY-MM-DD): ").strip()
 

@@ -1,41 +1,41 @@
 ID,Date,Title,Category,Amount,Payment Method,Notes
-1,2026-06-21,High-Speed Internet Bill,Housing & Utilities,61.29,UPI / Online,Auto-generated mock expense #18
-2,2026-06-23,IMAX Movie Tickets,Entertainment,36.38,Credit Card,Auto-generated mock expense #21
-3,2026-06-23,Car Maintenance & Oil Change,Transportation,245.37,Credit Card,Auto-generated mock expense #32
-4,2026-06-24,Uber Ride Downtown,Transportation,18.21,UPI / Online,Auto-generated mock expense #2
-5,2026-06-26,Monthly Subway Pass,Transportation,102.61,Debit Card,Auto-generated mock expense #14
-6,2026-06-28,Python & Data Science Udemy Course,Education,17.29,UPI / Online,Auto-generated mock expense #33
-7,2026-06-30,Textbooks & Technical Books,Education,41.61,Credit Card,Auto-generated mock expense #36
-8,2026-07-03,Post Office Shipping,Miscellaneous,23.67,Cash,Auto-generated mock expense #19
-9,2026-07-04,Farmers Market Fresh Produce,Food & Dining,48.24,UPI / Online,Auto-generated mock expense #30
-10,2026-07-04,High-Speed Internet Bill,Housing & Utilities,77.88,Credit Card,Auto-generated mock expense #38
-11,2026-07-05,Python & Data Science Udemy Course,Education,32.84,Credit Card,Auto-generated mock expense #3
-12,2026-07-06,Car Maintenance & Oil Change,Transportation,112.34,Debit Card,Auto-generated mock expense #26
-13,2026-07-07,Amazon Electronics & Gadgets,Shopping,68.72,UPI / Online,Auto-generated mock expense #13
-14,2026-07-09,Uber Ride Downtown,Transportation,26.62,UPI / Online,Auto-generated mock expense #5
-15,2026-07-13,Italian Bistro Dinner,Food & Dining,73.86,Debit Card,Auto-generated mock expense #31
-16,2026-07-15,Uber Ride Downtown,Transportation,37.94,UPI / Online,Auto-generated mock expense #28
-17,2026-07-16,IMAX Movie Tickets,Entertainment,25.10,UPI / Online,Auto-generated mock expense #35
-18,2026-07-22,Home Decor & Furnishings,Shopping,59.10,Credit Card,Auto-generated mock expense #11
-19,2026-07-22,Haircut & Grooming,Personal Care,28.03,UPI / Online,Auto-generated mock expense #16
-20,2026-07-29,Stock Portfolio Deposit,Investments,158.03,Bank Transfer,Auto-generated mock expense #23
-21,2026-08-02,Pharmacy Prescription Refill,Healthcare,56.71,Debit Card,Auto-generated mock expense #17
-22,2026-08-03,Netflix & Spotify Subscription,Entertainment,26.98,Credit Card,Auto-generated mock expense #27
-23,2026-08-03,Electricity & Power Bill,Housing & Utilities,101.65,UPI / Online,Auto-generated mock expense #39
-24,2026-08-05,Italian Bistro Dinner,Food & Dining,73.49,Debit Card,Auto-generated mock expense #10
-25,2026-08-18,Pharmacy Prescription Refill,Healthcare,20.57,Cash,Auto-generated mock expense #1
-26,2026-08-19,Skincare & Toiletries,Personal Care,69.27,Debit Card,Auto-generated mock expense #40
-27,2026-08-20,Uber Ride Downtown,Transportation,32.78,UPI / Online,Auto-generated mock expense #15
-28,2026-08-20,Electricity & Power Bill,Housing & Utilities,128.21,UPI / Online,Auto-generated mock expense #22
-29,2026-08-21,Monthly Subway Pass,Transportation,102.90,Credit Card,Auto-generated mock expense #6
-30,2026-08-22,Netflix & Spotify Subscription,Entertainment,18.32,Credit Card,Auto-generated mock expense #4
-31,2026-08-22,Car Maintenance & Oil Change,Transportation,100.59,Debit Card,Auto-generated mock expense #24
-32,2026-08-29,IMAX Movie Tickets,Entertainment,42.68,Credit Card,Auto-generated mock expense #7
-33,2026-08-29,Pharmacy Prescription Refill,Healthcare,23.56,Debit Card,Auto-generated mock expense #20
-34,2026-08-29,Electricity & Power Bill,Housing & Utilities,73.37,Bank Transfer,Auto-generated mock expense #34
-35,2026-08-30,Gym Membership,Healthcare,50.57,Bank Transfer,Auto-generated mock expense #8
-36,2026-08-30,Apartment Monthly Rent,Housing & Utilities,1412.92,Bank Transfer,Auto-generated mock expense #37
-37,2026-08-31,Pharmacy Prescription Refill,Healthcare,39.96,Cash,Auto-generated mock expense #25
-38,2026-09-04,Concert Ticket,Entertainment,75.45,Credit Card,Auto-generated mock expense #29
-39,2026-09-05,Monthly Subway Pass,Transportation,108.93,Credit Card,Auto-generated mock expense #9
-40,2026-09-08,Amazon Electronics & Gadgets,Shopping,49.36,UPI / Online,Auto-generated mock expense #12
+1,2026-06-21,JioFiber / Airtel Broadband,Housing & Utilities,803.75,Credit Card,Auto-generated mock expense #18
+2,2026-06-23,PlayStation / Steam Game Purchase,Entertainment,1127.54,UPI / Online,Auto-generated mock expense #32
+3,2026-06-24,Uber / Ola Auto Ride,Transportation,193.66,UPI / Online,Auto-generated mock expense #2
+4,2026-06-26,Monthly Metro Smart Card Recharge,Transportation,1645.49,UPI / Online,Auto-generated mock expense #14
+5,2026-06-28,Udemy / Coursera Python Course,Education,590.64,Credit Card,Auto-generated mock expense #33
+6,2026-06-29,Petrol / Fuel Station,Transportation,2263.20,Credit Card,Auto-generated mock expense #21
+7,2026-06-30,Engineering & Computer Science Books,Education,691.18,UPI / Online,Auto-generated mock expense #36
+8,2026-07-03,India Post / Courier Charges,Miscellaneous,355.06,UPI / Online,Auto-generated mock expense #19
+9,2026-07-04,Local Vegetable & Fruit Market,Food & Dining,576.47,Cash,Auto-generated mock expense #30
+10,2026-07-04,JioFiber / Airtel Broadband,Housing & Utilities,1080.26,UPI / Online,Auto-generated mock expense #38
+11,2026-07-05,Udemy / Coursera Python Course,Education,1212.74,UPI / Online,Auto-generated mock expense #3
+12,2026-07-06,Amazon / Flipkart Electronics & Gadgets,Shopping,1772.14,Credit Card,Auto-generated mock expense #27
+13,2026-07-07,Amazon / Flipkart Electronics & Gadgets,Shopping,1884.76,Credit Card,Auto-generated mock expense #13
+14,2026-07-09,Uber / Ola Auto Ride,Transportation,286.77,UPI / Online,Auto-generated mock expense #5
+15,2026-07-09,Local Vegetable & Fruit Market,Food & Dining,358.93,UPI / Online,Auto-generated mock expense #26
+16,2026-07-15,Piped Gas / LPG Cylinder,Housing & Utilities,940.50,UPI / Online,Auto-generated mock expense #28
+17,2026-07-16,PVR Cinemas Movie Tickets,Entertainment,351.78,Credit Card,Auto-generated mock expense #35
+18,2026-07-21,South Indian Restaurant Lunch,Food & Dining,815.53,Credit Card,Auto-generated mock expense #31
+19,2026-07-22,Home Decor & Kitchen Appliances,Shopping,1234.85,UPI / Online,Auto-generated mock expense #11
+20,2026-07-22,Hair Salon & Grooming,Personal Care,360.60,Cash,Auto-generated mock expense #16
+21,2026-07-22,Apollo Pharmacy Medicine Refill,Healthcare,1073.89,Cash,Auto-generated mock expense #25
+22,2026-07-29,Uber / Ola Auto Ride,Transportation,391.19,Cash,Auto-generated mock expense #23
+23,2026-08-02,Apollo Pharmacy Medicine Refill,Healthcare,1559.46,UPI / Online,Auto-generated mock expense #17
+24,2026-08-03,Electricity Bill (BESCOM/MSEB/TNEB),Housing & Utilities,2323.79,UPI / Online,Auto-generated mock expense #39
+25,2026-08-05,South Indian Restaurant Lunch,Food & Dining,810.93,Debit Card,Auto-generated mock expense #10
+26,2026-08-14,Apollo Pharmacy Medicine Refill,Healthcare,511.43,Cash,Auto-generated mock expense #1
+27,2026-08-18,Apollo Pharmacy Medicine Refill,Healthcare,598.15,Cash,Auto-generated mock expense #20
+28,2026-08-19,Skincare & Personal Hygiene Products,Personal Care,1483.85,Debit Card,Auto-generated mock expense #40
+29,2026-08-20,Uber / Ola Auto Ride,Transportation,375.11,UPI / Online,Auto-generated mock expense #15
+30,2026-08-21,Monthly Metro Smart Card Recharge,Transportation,1659.22,Debit Card,Auto-generated mock expense #6
+31,2026-08-22,Netflix & Disney+ Hotstar Subscription,Entertainment,311.71,UPI / Online,Auto-generated mock expense #4
+32,2026-08-22,Bike / Car Service & Oil Change,Transportation,1698.57,Debit Card,Auto-generated mock expense #24
+33,2026-08-29,PVR Cinemas Movie Tickets,Entertainment,674.10,UPI / Online,Auto-generated mock expense #7
+34,2026-08-29,Electricity Bill (BESCOM/MSEB/TNEB),Housing & Utilities,1456.57,Bank Transfer,Auto-generated mock expense #34
+35,2026-08-30,Cult.fit / Local Gym Monthly Membership,Healthcare,1749.40,Credit Card,Auto-generated mock expense #8
+36,2026-08-30,House Rent Payment,Housing & Utilities,22941.70,Bank Transfer,Auto-generated mock expense #37
+37,2026-09-04,Standup Comedy / Live Concert Show,Entertainment,954.55,UPI / Online,Auto-generated mock expense #29
+38,2026-09-05,Monthly Metro Smart Card Recharge,Transportation,1948.66,Debit Card,Auto-generated mock expense #9
+39,2026-09-08,Amazon / Flipkart Electronics & Gadgets,Shopping,1261.86,Credit Card,Auto-generated mock expense #12
+40,2026-09-11,Cult.fit / Local Gym Monthly Membership,Healthcare,1924.03,Credit Card,Auto-generated mock expense #22

@@ -76,7 +76,7 @@ class Visualizer:
 
         ax.legend(
             wedges,
-            [f"{cat}: ${val:,.2f}" for cat, val in zip(categories, values)],
+            [f"{cat}: ₹{val:,.2f}" for cat, val in zip(categories, values)],
             title="Categories",
             loc="center left",
             bbox_to_anchor=(1, 0, 0.5, 1),
@@ -86,8 +86,8 @@ class Visualizer:
         )
 
         total_spent = sum(values)
-        ax.text(0, 0, f"Total\n${total_spent:,.2f}", ha="center", va="center", fontsize=12, fontweight="bold", color="#2C3E50")
-        ax.set_title("Expense Breakdown by Category", fontsize=14, fontweight="bold", pad=20, color="#1A202C")
+        ax.text(0, 0, f"Total\n₹{total_spent:,.2f}", ha="center", va="center", fontsize=12, fontweight="bold", color="#2C3E50")
+        ax.set_title("Expense Breakdown by Category (INR)", fontsize=14, fontweight="bold", pad=20, color="#1A202C")
 
         plt.tight_layout()
         output_path = os.path.join(self.charts_dir, filename)
@@ -119,13 +119,13 @@ class Visualizer:
 
         # Average reference line
         avg_monthly = np.mean(totals)
-        ax.axhline(avg_monthly, color="#EF4444", linestyle=":", linewidth=1.8, label=f"Monthly Average (${avg_monthly:,.2f})", zorder=4)
+        ax.axhline(avg_monthly, color="#EF4444", linestyle=":", linewidth=1.8, label=f"Monthly Average (₹{avg_monthly:,.2f})", zorder=4)
 
         # Value labels above bars
         for bar in bars:
             height = bar.get_height()
             ax.annotate(
-                f"${height:,.2f}",
+                f"₹{height:,.0f}",
                 xy=(bar.get_x() + bar.get_width() / 2, height),
                 xytext=(0, 4),
                 textcoords="offset points",
@@ -136,9 +136,9 @@ class Visualizer:
                 color="#1F2937"
             )
 
-        ax.set_title("Monthly Spending Overview", fontsize=14, fontweight="bold", pad=15, color="#111827")
+        ax.set_title("Monthly Spending Overview (INR)", fontsize=14, fontweight="bold", pad=15, color="#111827")
         ax.set_xlabel("Billing Period (Month)", fontsize=11, labelpad=10)
-        ax.set_ylabel("Total Spent ($)", fontsize=11, labelpad=10)
+        ax.set_ylabel("Total Spent (₹)", fontsize=11, labelpad=10)
         ax.legend(loc="upper right", frameon=True)
 
         plt.tight_layout()
@@ -169,16 +169,16 @@ class Visualizer:
         moving_avg = daily_df["7-Day Moving Avg"]
 
         # Daily bar spikes
-        ax1.bar(dates, daily_amt, color="#93C5FD", alpha=0.5, label="Daily Spending ($)", width=0.8, zorder=2)
+        ax1.bar(dates, daily_amt, color="#93C5FD", alpha=0.5, label="Daily Spending (₹)", width=0.8, zorder=2)
         ax1.plot(dates, moving_avg, color="#2563EB", linewidth=2.2, label="7-Day Moving Avg", zorder=3)
-        ax1.set_ylabel("Daily Expenses ($)", color="#1E40AF", fontsize=11)
+        ax1.set_ylabel("Daily Expenses (₹)", color="#1E40AF", fontsize=11)
         ax1.tick_params(axis="y", labelcolor="#1E40AF")
 
         # Secondary axis for cumulative spending
         ax2 = ax1.twinx()
-        ax2.plot(dates, cum_amt, color="#10B981", linewidth=2.5, linestyle="--", label="Cumulative Spent ($)", zorder=4)
+        ax2.plot(dates, cum_amt, color="#10B981", linewidth=2.5, linestyle="--", label="Cumulative Spent (₹)", zorder=4)
         ax2.fill_between(dates, cum_amt, color="#D1FAE5", alpha=0.3, zorder=1)
-        ax2.set_ylabel("Cumulative Spending ($)", color="#065F46", fontsize=11)
+        ax2.set_ylabel("Cumulative Spending (₹)", color="#065F46", fontsize=11)
         ax2.tick_params(axis="y", labelcolor="#065F46")
         ax2.grid(False)
 
@@ -187,7 +187,7 @@ class Visualizer:
         plt.xticks(rotation=30)
 
         # Title and legends
-        ax1.set_title("Daily Spending Timeline & Cumulative Trajectory", fontsize=14, fontweight="bold", pad=15)
+        ax1.set_title("Daily Spending Timeline & Cumulative Trajectory (INR)", fontsize=14, fontweight="bold", pad=15)
         lines1, labels1 = ax1.get_legend_handles_labels()
         lines2, labels2 = ax2.get_legend_handles_labels()
         ax1.legend(lines1 + lines2, labels1 + labels2, loc="upper left", frameon=True)
@@ -228,17 +228,17 @@ class Visualizer:
 
         fig, ax = plt.subplots(figsize=(10, max(5.5, len(categories) * 0.55)))
 
-        bars_limit = ax.barh(y - height/2, limits, height, label="Budget Limit", color="#CBD5E1", edgecolor="#94A3B8")
+        bars_limit = ax.barh(y - height/2, limits, height, label="Budget Limit (₹)", color="#CBD5E1", edgecolor="#94A3B8")
         
         # Color spent bars by status (green for safe, red for exceeded)
         spent_colors = ["#EF4444" if s > l else "#10B981" for s, l in zip(spent, limits)]
-        bars_spent = ax.barh(y + height/2, spent, height, label="Actual Spent", color=spent_colors, edgecolor="#0F172A", alpha=0.85)
+        bars_spent = ax.barh(y + height/2, spent, height, label="Actual Spent (₹)", color=spent_colors, edgecolor="#0F172A", alpha=0.85)
 
         ax.set_yticks(y)
         ax.set_yticklabels(categories, fontsize=10)
         ax.invert_yaxis()  # top-down
-        ax.set_xlabel("Amount ($)", fontsize=11, labelpad=10)
-        ax.set_title("Budget Allocation vs. Actual Spending", fontsize=14, fontweight="bold", pad=15)
+        ax.set_xlabel("Amount (₹)", fontsize=11, labelpad=10)
+        ax.set_title("Budget Allocation vs. Actual Spending (INR)", fontsize=14, fontweight="bold", pad=15)
         ax.legend(loc="lower right", frameon=True)
 
         plt.tight_layout()
@@ -262,7 +262,7 @@ class Visualizer:
         4. Budget vs Actual Comparison
         """
         fig, axs = plt.subplots(2, 2, figsize=(16, 11))
-        fig.suptitle("Smart Personal Expense & Financial Analytics Dashboard", fontsize=18, fontweight="bold", y=0.98, color="#0F172A")
+        fig.suptitle("Smart Personal Expense & Financial Analytics Dashboard (INR)", fontsize=18, fontweight="bold", y=0.98, color="#0F172A")
 
         # 1. Top-Left: Category Breakdown
         cat_df = self.analytics.get_category_summary()
@@ -285,9 +285,9 @@ class Visualizer:
             ax2.bar(months, totals, color="#3B82F6", width=0.5, edgecolor="#1D4ED8")
             ax2.grid(axis="y", linestyle="--", alpha=0.7)
             ax2.set_title("Monthly Total Expenses", fontsize=12, fontweight="bold")
-            ax2.set_ylabel("Spent ($)")
+            ax2.set_ylabel("Spent (₹)")
             for i, val in enumerate(totals):
-                ax2.text(i, val + (max(totals)*0.02), f"${val:,.0f}", ha="center", fontsize=9, fontweight="bold")
+                ax2.text(i, val + (max(totals)*0.02), f"₹{val:,.0f}", ha="center", fontsize=9, fontweight="bold")
         else:
             axs[0, 1].text(0.5, 0.5, "No Monthly Data", ha="center", va="center")
 
@@ -299,7 +299,7 @@ class Visualizer:
             shares = pay_df["Total Spent"].tolist()
             ax3.barh(methods, shares, color="#8B5CF6", height=0.55, edgecolor="#6D28D9")
             ax3.set_title("Spending by Payment Method", fontsize=12, fontweight="bold")
-            ax3.set_xlabel("Total ($)")
+            ax3.set_xlabel("Total (₹)")
             ax3.grid(axis="x", linestyle="--", alpha=0.7)
         else:
             axs[1, 0].text(0.5, 0.5, "No Payment Method Data", ha="center", va="center")

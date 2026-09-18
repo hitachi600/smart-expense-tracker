@@ -24,10 +24,10 @@ def colorize(text: str, color_code: str) -> str:
     return f"{color_code}{text}{Colors.RESET}"
 
 
-def format_currency(amount: float | int, currency_symbol: str = "$") -> str:
+def format_currency(amount: float | int, currency_symbol: str = "₹") -> str:
     """
     Formats a numeric amount as currency with commas and 2 decimals.
-    Example: 12500.5 -> '$12,500.50'
+    Example: 12500.5 -> '₹12,500.50'
     """
     try:
         val = float(amount)

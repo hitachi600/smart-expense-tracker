@@ -51,70 +51,70 @@ DEFAULT_CATEGORIES: Dict[str, Category] = {
         icon="🍔",
         color="#FF6B6B",
         description="Groceries, restaurants, snacks, drinks, food delivery",
-        default_monthly_budget=600.0
+        default_monthly_budget=10000.0
     ),
     "Transportation": Category(
         name="Transportation",
         icon="🚗",
         color="#4D96FF",
         description="Fuel, public transit, rideshare, parking, maintenance",
-        default_monthly_budget=300.0
+        default_monthly_budget=5000.0
     ),
     "Housing & Utilities": Category(
         name="Housing & Utilities",
         icon="🏠",
         color="#6BCB77",
         description="Rent/mortgage, power, water, gas, home internet",
-        default_monthly_budget=1400.0
+        default_monthly_budget=20000.0
     ),
     "Entertainment": Category(
         name="Entertainment",
         icon="🎬",
         color="#FFD93D",
         description="Streaming, movies, concerts, games, events",
-        default_monthly_budget=150.0
+        default_monthly_budget=3000.0
     ),
     "Shopping": Category(
         name="Shopping",
         icon="🛍️",
         color="#9B59B6",
         description="Clothing, gadgets, electronics, home items",
-        default_monthly_budget=250.0
+        default_monthly_budget=6000.0
     ),
     "Healthcare": Category(
         name="Healthcare",
         icon="💊",
         color="#1ABC9C",
         description="Medicine, doctor visits, dental, gym, health insurance",
-        default_monthly_budget=200.0
+        default_monthly_budget=3500.0
     ),
     "Education": Category(
         name="Education",
         icon="📚",
         color="#E67E22",
         description="Tuition, courses, books, learning supplies",
-        default_monthly_budget=100.0
+        default_monthly_budget=2500.0
     ),
     "Investments": Category(
         name="Investments",
         icon="📈",
         color="#2ECC71",
         description="Stocks, index funds, savings, retirement deposits",
-        default_monthly_budget=500.0
+        default_monthly_budget=10000.0
     ),
     "Personal Care": Category(
         name="Personal Care",
         icon="💈",
         color="#E84393",
         description="Salons, barbers, cosmetics, spa, personal hygiene",
-        default_monthly_budget=100.0
+        default_monthly_budget=2000.0
     ),
     "Miscellaneous": Category(
         name="Miscellaneous",
         icon="📦",
         color="#95A5A6",
         description="Uncategorized or one-off miscellaneous expenses",
-        default_monthly_budget=150.0
+        default_monthly_budget=2500.0
     )
 }
 

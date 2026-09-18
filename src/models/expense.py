@@ -195,7 +195,7 @@ class Expense:
     # --- Python Magic Methods ---
 
     def __str__(self) -> str:
-        return f"[{self.date}] #{self.id:03d} | {self.icon} {self.category:<18} | {self.title:<24} | ${self.amount:>8.2f} ({self.payment_method})"
+        return f"[{self.date}] #{self.id:03d} | {self.icon} {self.category:<18} | {self.title:<24} | ₹{self.amount:>8.2f} ({self.payment_method})"
 
     def __repr__(self) -> str:
         return (

@@ -7,7 +7,7 @@
 [![Tests](https://img.shields.io/badge/Tests-25%20Passed-brightgreen.svg)]()
 [![Code Style](https://img.shields.io/badge/Code%20Style-PEP%208-orange.svg)]()
 
-> A production-grade, object-oriented financial management system and data analytics suite written in Python. Goes far beyond basic CRUD to provide deep statistical analytics, time-series aggregation, budget health tracking, and publication-ready financial visualizations.
+> A production-grade, object-oriented financial management system and data analytics suite written in Python, tailored for Indian Rupee (₹ - INR) currency and realistic spending habits. Goes far beyond basic CRUD to provide deep statistical analytics, time-series aggregation, budget health tracking, and publication-ready financial visualizations.
 
 ---
 

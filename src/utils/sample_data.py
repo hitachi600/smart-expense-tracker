@@ -10,55 +10,55 @@ from typing import List, Dict, Any
 
 SAMPLE_TRANSACTIONS = [
     # Food & Dining
-    ("Food & Dining", "Grocery Supermarket", (35.0, 180.0), ["Credit Card", "Debit Card", "UPI / Online"]),
-    ("Food & Dining", "Starbucks Coffee", (4.5, 15.0), ["UPI / Online", "Cash", "Credit Card"]),
-    ("Food & Dining", "Italian Bistro Dinner", (45.0, 120.0), ["Credit Card", "Debit Card"]),
-    ("Food & Dining", "UberEats Delivery", (18.0, 45.0), ["UPI / Online", "Credit Card"]),
-    ("Food & Dining", "Farmers Market Fresh Produce", (20.0, 65.0), ["Cash", "UPI / Online"]),
+    ("Food & Dining", "DMart / Reliance Fresh Grocery", (1500.0, 5500.0), ["UPI / Online", "Credit Card", "Debit Card"]),
+    ("Food & Dining", "Chai & Snacks at Cafe", (80.0, 350.0), ["UPI / Online", "Cash"]),
+    ("Food & Dining", "South Indian Restaurant Lunch", (450.0, 1400.0), ["UPI / Online", "Debit Card", "Credit Card"]),
+    ("Food & Dining", "Swiggy / Zomato Order", (250.0, 750.0), ["UPI / Online", "Credit Card"]),
+    ("Food & Dining", "Local Vegetable & Fruit Market", (200.0, 800.0), ["UPI / Online", "Cash"]),
 
     # Transportation
-    ("Transportation", "Gas Station Fuel", (40.0, 75.0), ["Credit Card", "Debit Card"]),
-    ("Transportation", "Monthly Subway Pass", (85.0, 110.0), ["Debit Card", "Credit Card"]),
-    ("Transportation", "Uber Ride Downtown", (15.0, 38.0), ["UPI / Online", "Credit Card"]),
-    ("Transportation", "Car Maintenance & Oil Change", (90.0, 250.0), ["Credit Card", "Debit Card"]),
+    ("Transportation", "Petrol / Fuel Station", (1200.0, 3500.0), ["UPI / Online", "Credit Card", "Debit Card"]),
+    ("Transportation", "Monthly Metro Smart Card Recharge", (800.0, 2000.0), ["UPI / Online", "Debit Card"]),
+    ("Transportation", "Uber / Ola Auto Ride", (120.0, 450.0), ["UPI / Online", "Cash"]),
+    ("Transportation", "Bike / Car Service & Oil Change", (1500.0, 4500.0), ["UPI / Online", "Debit Card"]),
 
     # Housing & Utilities
-    ("Housing & Utilities", "Apartment Monthly Rent", (950.0, 1500.0), ["Bank Transfer"]),
-    ("Housing & Utilities", "Electricity & Power Bill", (65.0, 140.0), ["UPI / Online", "Bank Transfer"]),
-    ("Housing & Utilities", "High-Speed Internet Bill", (55.0, 85.0), ["Credit Card", "UPI / Online"]),
-    ("Housing & Utilities", "Water & Sewage Utility", (30.0, 60.0), ["Bank Transfer", "UPI / Online"]),
+    ("Housing & Utilities", "House Rent Payment", (12000.0, 25000.0), ["Bank Transfer", "UPI / Online"]),
+    ("Housing & Utilities", "Electricity Bill (BESCOM/MSEB/TNEB)", (1200.0, 3500.0), ["UPI / Online", "Bank Transfer"]),
+    ("Housing & Utilities", "JioFiber / Airtel Broadband", (699.0, 1199.0), ["UPI / Online", "Credit Card"]),
+    ("Housing & Utilities", "Piped Gas / LPG Cylinder", (850.0, 1100.0), ["UPI / Online", "Bank Transfer"]),
 
     # Entertainment
-    ("Entertainment", "Netflix & Spotify Subscription", (18.0, 28.0), ["Credit Card"]),
-    ("Entertainment", "IMAX Movie Tickets", (25.0, 55.0), ["Credit Card", "UPI / Online"]),
-    ("Entertainment", "Concert Ticket", (65.0, 180.0), ["Credit Card"]),
-    ("Entertainment", "Steam Game Purchase", (15.0, 60.0), ["UPI / Online", "Credit Card"]),
+    ("Entertainment", "Netflix & Disney+ Hotstar Subscription", (299.0, 699.0), ["UPI / Online", "Credit Card"]),
+    ("Entertainment", "PVR Cinemas Movie Tickets", (350.0, 900.0), ["UPI / Online", "Credit Card"]),
+    ("Entertainment", "Standup Comedy / Live Concert Show", (800.0, 2500.0), ["UPI / Online", "Credit Card"]),
+    ("Entertainment", "PlayStation / Steam Game Purchase", (499.0, 2999.0), ["UPI / Online", "Credit Card"]),
 
     # Shopping
-    ("Shopping", "Amazon Electronics & Gadgets", (35.0, 150.0), ["Credit Card", "UPI / Online"]),
-    ("Shopping", "Clothing & Apparel", (45.0, 210.0), ["Credit Card", "Debit Card"]),
-    ("Shopping", "Home Decor & Furnishings", (30.0, 140.0), ["Credit Card", "Debit Card"]),
+    ("Shopping", "Amazon / Flipkart Electronics & Gadgets", (800.0, 4500.0), ["UPI / Online", "Credit Card"]),
+    ("Shopping", "Myntra / Ajio Clothing & Footwear", (1200.0, 5000.0), ["UPI / Online", "Credit Card", "Debit Card"]),
+    ("Shopping", "Home Decor & Kitchen Appliances", (600.0, 3000.0), ["UPI / Online", "Debit Card"]),
 
     # Healthcare
-    ("Healthcare", "Pharmacy Prescription Refill", (15.0, 65.0), ["Debit Card", "Cash"]),
-    ("Healthcare", "Dental Cleaning & Checkup", (80.0, 180.0), ["Credit Card", "Debit Card"]),
-    ("Healthcare", "Gym Membership", (40.0, 65.0), ["Credit Card", "Bank Transfer"]),
+    ("Healthcare", "Apollo Pharmacy Medicine Refill", (350.0, 1800.0), ["UPI / Online", "Debit Card", "Cash"]),
+    ("Healthcare", "Doctor Consultation & Diagnostic Tests", (600.0, 2000.0), ["UPI / Online", "Credit Card"]),
+    ("Healthcare", "Cult.fit / Local Gym Monthly Membership", (1200.0, 2500.0), ["UPI / Online", "Credit Card"]),
 
     # Education
-    ("Education", "Python & Data Science Udemy Course", (15.0, 35.0), ["Credit Card", "UPI / Online"]),
-    ("Education", "Textbooks & Technical Books", (30.0, 95.0), ["Credit Card", "Debit Card"]),
+    ("Education", "Udemy / Coursera Python Course", (499.0, 1299.0), ["UPI / Online", "Credit Card"]),
+    ("Education", "Engineering & Computer Science Books", (450.0, 1800.0), ["UPI / Online", "Debit Card"]),
 
     # Investments
-    ("Investments", "Monthly Index Fund Contribution", (200.0, 500.0), ["Bank Transfer"]),
-    ("Investments", "Stock Portfolio Deposit", (150.0, 400.0), ["Bank Transfer"]),
+    ("Investments", "Monthly Mutual Fund SIP (Groww/Zerodha)", (2500.0, 10000.0), ["UPI / Online", "Bank Transfer"]),
+    ("Investments", "Stock Portfolio Investment", (2000.0, 8000.0), ["Bank Transfer", "UPI / Online"]),
 
     # Personal Care
-    ("Personal Care", "Haircut & Grooming", (25.0, 55.0), ["Cash", "UPI / Online"]),
-    ("Personal Care", "Skincare & Toiletries", (20.0, 70.0), ["Credit Card", "Debit Card"]),
+    ("Personal Care", "Hair Salon & Grooming", (300.0, 900.0), ["UPI / Online", "Cash"]),
+    ("Personal Care", "Skincare & Personal Hygiene Products", (400.0, 1500.0), ["UPI / Online", "Debit Card"]),
 
     # Miscellaneous
-    ("Miscellaneous", "Post Office Shipping", (10.0, 30.0), ["Cash", "Debit Card"]),
-    ("Miscellaneous", "Charity Donation", (25.0, 100.0), ["UPI / Online", "Credit Card"]),
+    ("Miscellaneous", "India Post / Courier Charges", (150.0, 450.0), ["UPI / Online", "Cash"]),
+    ("Miscellaneous", "Community Donation / Gift Contribution", (500.0, 2000.0), ["UPI / Online", "Credit Card"]),
 ]
 
 

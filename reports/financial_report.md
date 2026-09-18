@@ -1,6 +1,6 @@
 # 📊 Smart Financial Analytics & Expense Report
 
-**Generated on:** `2026-09-18 13:40:32`  
+**Generated on:** `2026-09-18 14:59:39`  
 **Total Records:** `40`
 
 ---
@@ -9,11 +9,11 @@
 
 | Metric | Value | Metric | Value |
 | :--- | :--- | :--- | :--- |
-| **Total Expenditure** | **$3,903.40** | **Std Deviation** | $215.28 |
-| **Mean (Average)** | $97.59 | **25th Percentile** | $31.59 |
-| **Median** | $53.64 | **75th Percentile** | $83.56 |
-| **Min Transaction** | $17.29 | **90th Percentile** | $113.93 |
-| **Max Transaction** | $1,412.92 | **IQR** | $51.97 |
+| **Total Expenditure** | **₹64,254.02** | **Std Deviation** | ₹3,468.35 |
+| **Mean (Average)** | ₹1,606.35 | **25th Percentile** | ₹560.21 |
+| **Median** | ₹1,014.22 | **75th Percentile** | ₹1,648.92 |
+| **Min Transaction** | ₹193.66 | **90th Percentile** | ₹1,926.49 |
+| **Max Transaction** | ₹22,941.70 | **IQR** | ₹1,088.71 |
 
 ---
 
@@ -21,16 +21,15 @@
 
 | Category | Total Spent | Count | Average | % Share |
 | :--- | :--- | :--- | :--- | :--- |
-| Housing & Utilities | $1,855.32 | 6 | $309.22 | 47.5% |
-| Transportation | $888.29 | 10 | $88.83 | 22.8% |
-| Entertainment | $224.91 | 6 | $37.49 | 5.8% |
-| Food & Dining | $195.59 | 3 | $65.20 | 5.0% |
-| Healthcare | $191.37 | 5 | $38.27 | 4.9% |
-| Shopping | $177.18 | 3 | $59.06 | 4.5% |
-| Investments | $158.03 | 1 | $158.03 | 4.0% |
-| Personal Care | $97.30 | 2 | $48.65 | 2.5% |
-| Education | $91.74 | 3 | $30.58 | 2.4% |
-| Miscellaneous | $23.67 | 1 | $23.67 | 0.6% |
+| Housing & Utilities | ₹29,546.57 | 6 | ₹4,924.43 | 46.0% |
+| Transportation | ₹10,461.87 | 9 | ₹1,162.43 | 16.3% |
+| Healthcare | ₹7,416.36 | 6 | ₹1,236.06 | 11.5% |
+| Shopping | ₹6,153.61 | 4 | ₹1,538.40 | 9.6% |
+| Entertainment | ₹3,419.68 | 5 | ₹683.94 | 5.3% |
+| Food & Dining | ₹2,561.86 | 4 | ₹640.46 | 4.0% |
+| Education | ₹2,494.56 | 3 | ₹831.52 | 3.9% |
+| Personal Care | ₹1,844.45 | 2 | ₹922.22 | 2.9% |
+| Miscellaneous | ₹355.06 | 1 | ₹355.06 | 0.6% |
 
 ---
 
@@ -38,10 +37,10 @@
 
 | Month | Total Spent | Transactions | Avg / Txn | Top Category |
 | :--- | :--- | :--- | :--- | :--- |
-| 2026-06 | $522.76 | 7 | $74.68 | Transportation |
-| 2026-07 | $772.37 | 13 | $59.41 | Transportation |
-| 2026-08 | $2,374.53 | 17 | $139.68 | Housing & Utilities |
-| 2026-09 | $233.74 | 3 | $77.91 | Transportation |
+| 2026-06 | ₹7,315.46 | 7 | ₹1,045.07 | Transportation |
+| 2026-07 | ₹12,695.47 | 15 | ₹846.36 | Shopping |
+| 2026-08 | ₹38,153.99 | 14 | ₹2,725.29 | Housing & Utilities |
+| 2026-09 | ₹6,089.10 | 4 | ₹1,522.28 | Transportation |
 
 ---
 
@@ -49,11 +48,11 @@
 
 | ID | Date | Category | Title | Amount | Method |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| #36 | 2026-08-30 | Housing & Utilities | Apartment Monthly Rent | **$1,412.92** | Bank Transfer |
-| #3 | 2026-06-23 | Transportation | Car Maintenance & Oil Change | **$245.37** | Credit Card |
-| #20 | 2026-07-29 | Investments | Stock Portfolio Deposit | **$158.03** | Bank Transfer |
-| #28 | 2026-08-20 | Housing & Utilities | Electricity & Power Bill | **$128.21** | UPI / Online |
-| #12 | 2026-07-06 | Transportation | Car Maintenance & Oil Change | **$112.34** | Debit Card |
+| #36 | 2026-08-30 | Housing & Utilities | House Rent Payment | **₹22,941.70** | Bank Transfer |
+| #24 | 2026-08-03 | Housing & Utilities | Electricity Bill (BESCOM/MSEB/TNEB) | **₹2,323.79** | UPI / Online |
+| #6 | 2026-06-29 | Transportation | Petrol / Fuel Station | **₹2,263.20** | Credit Card |
+| #38 | 2026-09-05 | Transportation | Monthly Metro Smart Card Recharge | **₹1,948.66** | Debit Card |
+| #40 | 2026-09-11 | Healthcare | Cult.fit / Local Gym Monthly Membership | **₹1,924.03** | Credit Card |
 
 ---
 
@@ -61,13 +60,13 @@
 
 | Category | Budget Limit | Actual Spent | Remaining | % Used | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Food & Dining | $600.00 | $195.59 | $404.41 | 32.6% | 🟢 ON TRACK |
-| Transportation | $300.00 | $888.29 | $-588.29 | 296.1% | 🔴 EXCEEDED |
-| Housing & Utilities | $1,400.00 | $1,855.32 | $-455.32 | 132.5% | 🔴 EXCEEDED |
-| Entertainment | $150.00 | $224.91 | $-74.91 | 149.9% | 🔴 EXCEEDED |
-| Shopping | $250.00 | $177.18 | $72.82 | 70.9% | 🟢 ON TRACK |
-| Healthcare | $200.00 | $191.37 | $8.63 | 95.7% | 🟡 WARNING (85%+) |
-| Education | $100.00 | $91.74 | $8.26 | 91.7% | 🟡 WARNING (85%+) |
-| Investments | $500.00 | $158.03 | $341.97 | 31.6% | 🟢 ON TRACK |
-| Personal Care | $100.00 | $97.30 | $2.70 | 97.3% | 🟡 WARNING (85%+) |
-| Miscellaneous | $150.00 | $23.67 | $126.33 | 15.8% | 🟢 ON TRACK |
+| Food & Dining | ₹10,000.00 | ₹2,561.86 | ₹7,438.14 | 25.6% | 🟢 ON TRACK |
+| Transportation | ₹5,000.00 | ₹10,461.87 | ₹-5,461.87 | 209.2% | 🔴 EXCEEDED |
+| Housing & Utilities | ₹20,000.00 | ₹29,546.57 | ₹-9,546.57 | 147.7% | 🔴 EXCEEDED |
+| Entertainment | ₹3,000.00 | ₹3,419.68 | ₹-419.68 | 114.0% | 🔴 EXCEEDED |
+| Shopping | ₹6,000.00 | ₹6,153.61 | ₹-153.61 | 102.6% | 🔴 EXCEEDED |
+| Healthcare | ₹3,500.00 | ₹7,416.36 | ₹-3,916.36 | 211.9% | 🔴 EXCEEDED |
+| Education | ₹2,500.00 | ₹2,494.56 | ₹5.44 | 99.8% | 🟡 WARNING (85%+) |
+| Investments | ₹10,000.00 | ₹0.00 | ₹10,000.00 | 0.0% | 🟢 ON TRACK |
+| Personal Care | ₹2,000.00 | ₹1,844.45 | ₹155.55 | 92.2% | 🟡 WARNING (85%+) |
+| Miscellaneous | ₹2,500.00 | ₹355.06 | ₹2,144.94 | 14.2% | 🟢 ON TRACK |

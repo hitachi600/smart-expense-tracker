@@ -52,19 +52,19 @@ class Budget:
     Manages budget plans, category allocations, and alerts.
     """
 
-    def __init__(self, overall_monthly_limit: float = 3000.0, category_limits: Optional[Dict[str, float]] = None):
+    def __init__(self, overall_monthly_limit: float = 60000.0, category_limits: Optional[Dict[str, float]] = None):
         self.overall_monthly_limit = float(overall_monthly_limit)
         self.category_limits: Dict[str, float] = category_limits or {
-            "Food & Dining": 600.0,
-            "Transportation": 300.0,
-            "Housing & Utilities": 1400.0,
-            "Entertainment": 150.0,
-            "Shopping": 250.0,
-            "Healthcare": 200.0,
-            "Education": 100.0,
-            "Investments": 500.0,
-            "Personal Care": 100.0,
-            "Miscellaneous": 150.0
+            "Food & Dining": 10000.0,
+            "Transportation": 5000.0,
+            "Housing & Utilities": 20000.0,
+            "Entertainment": 3000.0,
+            "Shopping": 6000.0,
+            "Healthcare": 3500.0,
+            "Education": 2500.0,
+            "Investments": 10000.0,
+            "Personal Care": 2000.0,
+            "Miscellaneous": 2500.0
         }
 
     def set_category_limit(self, category: str, limit: float) -> None:
